@@ -4,20 +4,24 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 
 
 public class Main {
 	
 	// declaration of the elements	
-	// homepage button
+	String eventTestName = " ";
+	
+	// Home page button
 	public final By ELEMENT_HOMEPAGE_SIDEBOX_CALENDARBUTTON =  By.xpath("//*[@data-original-title='Calendar']");
+
 	// calendar page button
 	public final By ELEMENT_CALENDAR_QUICKADDEVENTBUTTON = By.id("UIActionBarQuickAddEvent");
 	public final By ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON = By.xpath("//*[@data-original-title = 'Calendar Actions']");
 	public final By ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE = By.xpath("//*[@id='tmpMenuElement']//*[@class='uiIconCalCreateEvent uiIconLightGray']");
 	public final String ELEMENT_CALENDAR_OPTIONSBUTTON_ADDEVENTCATEGORIE_DELETEEVENT = "//*[@class='UICalendarPopupAction']//*[text()='${calName}']/../..//*[@data-original-title='Delete']";
 	public final By ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE_DELETEEVENT_ALERT = By.xpath("//*[@class='uiAction uiActionBorder']//*[text()='OK']");
+	public final By ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE_CLOSEBUTTON = By.xpath("//*[@class='uiAction uiActionBorder']//*[text()='Close']");
+	
 	// quick add event 
 	public final By ELEMENT_CALENDAR_QUICKADDEVENT_NAMEFIELD = By.id("eventName");
 	public final By ELEMENT_CALENDAR_QUICKADDEVENT_SAVEBUTTON =  By.xpath ("//*[@id='UIQuickAddEventPopupWindow']//*[text()='Save']");
@@ -30,6 +34,15 @@ public class Main {
 	public final By ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SCHEDULE =  By.xpath ("//*[@data-toggle='tab' and text()='Schedule']");
 	public final By ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SAVEBUTTON = By .xpath("//*[@id='UIEventForm']//*[text()='Save']");
 
+	public final By ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_LOW = By.xpath("//*[@deschtml='event test5']/../..//*[@class='eventContainerBar eventTitle']/../..//*[@class='uiIconCallowPriority']");
+	public final By ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_NORMAL = By.xpath("//*[@deschtml='event test5']/../..//*[@class='eventContainerBar eventTitle']/../..//*[@class='uiIconCalnormalPriority']");
+	public final By ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_HIGH = By.xpath("//*[@deschtml='event test5']/../..//*[@class='eventContainerBar eventTitle']/../..//*[@class='uiIconCalhighPriority']");
+	public final String ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY ="//*[@ class='eventAlldayContent asparagus' and text()='${name}']"; 
+	public final String ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT = "//*[@id='UIWeekViewGrid']//div[contains(text(),'${name}')]";
+	
+	
+	
+	
 	
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -47,25 +60,24 @@ public class Main {
 		Calendar calendar= new Calendar();
 		
 		
-		// log onto exoplatform 
+		// log onto exopPLF
 		Log.main(driver, baseUrl, username, password);
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		//click on the calendar button
 		calendar.open(driver);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-		// execute the test suit
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		// execute the test suite
 		calendar.test1(driver, eventTest);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		calendar.test2(driver, eventTest2);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		calendar.test3(driver, eventTest3);
-		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		calendar.test4(driver);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		calendar.test5(driver, eventTest5);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		calendar.test6(driver, eventTest6);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
+		calendar.test6(driver, eventTest6); 
 		
 		
 	  }
