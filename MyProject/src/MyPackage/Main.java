@@ -22,7 +22,7 @@ public class Main {
 		String eventTest3 = "event test3";
 		String eventTest5 = "event test5";
 		String eventTest6 = "duplicated name";
-		Calendar calendar = new Calendar(driver);
+		calendar_test calendar = new calendar_test(driver);
 		
 		
 		// log onto exopPLF
