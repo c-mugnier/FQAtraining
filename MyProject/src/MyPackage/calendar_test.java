@@ -2,6 +2,7 @@ package MyPackage;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -21,27 +22,35 @@ public class calendar_test extends calendar_common {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	static Logger log = Logger.getLogger(
+            Log4j.class.getName());
 
 	static WebDriver driver;
 	String baseUrl = "http://localhost:8080/portal/intranet";
 	String username = "root";
 	String password = "gtn";
-	Log log;
+	LogPlf theLog;
 	calendar_common calComm;
 	
 	
 	@BeforeTest
 	public void before(){
-		log = new Log();
+		theLog = new LogPlf();
 		driver = new FirefoxDriver();
-		log.main(driver, baseUrl, username, password);
+		log.info("New driver created !");
+		theLog.main(driver, baseUrl, username, password);
+		log.info("Logged on PLF !");
 		calComm = new calendar_common(driver);
 		calComm.open();
+		log.info("Calendar open !");
 	}
 
 	@AfterTest
 	public void after(){
 		driver.quit();
+		log.info("Calendar closed !");
 	}
 
 	@Test
@@ -58,19 +67,23 @@ public class calendar_test extends calendar_common {
 		/*Step 1 : Click on the add quick event button*/
 		//Open the event creation form by right click
 		calComm.addEventByRightClick(eventTest);
-
+		log.info("Open quick event form by right click !");
 
 		/* Step 2: Add quick event */
 		//Click on the save button
 		driver.findElement(calComm.ELEMENT_CALENDAR_QUICKADDEVENT_SAVEBUTTON).click();
+		log.info("Event created !");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// verify the test
 		Assert.assertTrue(driver.findElement(By.xpath(calComm.ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT.replace("${name}", eventTest))).isDisplayed(), "test fail");
-
+		
 		// clear data
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		By path = By.xpath(calComm.ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT.replace("${name}", eventTest));
 		calComm.clearData(path);
+		log.info("Data cleaned !");
+		
+		log.info("Test 1 passed !");
 	}
 
 	@Test
@@ -89,27 +102,39 @@ public class calendar_test extends calendar_common {
 		/* Step 2: Add event with special characters */
 		//Click on the add quick event button & add the name
 		addEvent(eventTest2);
-
+		log.info("Open new event form !");
 		/* Step 1 : Show detail add event form */
 		//Display all the tabs
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS).click();
+		log.info("Open more details form !");
 		Assert.assertTrue(driver.findElement(By.id("eventDetail-tab")).isDisplayed(), "test fail");
+		log.info("Check !");
 		driver.findElement (ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_REMINDERS).click();
+		log.info("open reminders tabs !");
 		Assert.assertTrue(driver.findElement(By.id("eventReminder-tab")).isDisplayed(), "test fail");
+		log.info("Check !");
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_PARTICIPANTS).click();
+		log.info("open participants tabs !");
 		Assert.assertTrue(driver.findElement(By.id("eventShare-tab")).isDisplayed(), "test fail");
+		log.info("Check !");
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SCHEDULE).click();
+		log.info("open schedule tabs !");
 		Assert.assertTrue(driver.findElement(By.id("eventAttender-tab")).isDisplayed(), "test fail");
+		log.info("Check !");
 
 		// click on Save button
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SAVEBUTTON).click();
+		log.info("Event created !");
 
 		// verify
 		Assert.assertTrue(driver.findElement(By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT.replace("${name}", eventTest2))).isDisplayed(), "test fail");
-
+		log.info("Check !");
 		// clear data
 		By path = By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT.replace("${name}", eventTest2));
 		clearData(path);
+		log.info("Data cleared !");
+		
+		log.info("Test 2 passed !");
 	}
 
 	@Test
@@ -128,21 +153,24 @@ public class calendar_test extends calendar_common {
 		/* Step 1:Show add new event form */
 		// click on the add quick event button & set the event's title
 		addEvent(eventTest3);
-
+		log.info("Open new event form !");
 
 		// check the allDay box
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_ALLDAYCHECKBOX).click();
-
+		log.info("Check all day option !");
 		/* Step 2: Complete adding new event */
 		// click on Save button
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_SAVEBUTTON).click();
-
+		log.info("Event created !");
 		// verify
 		Assert.assertTrue(driver.findElement(By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY.replace("${name}", eventTest3))).isDisplayed(), "test fail");
-
+		log.info("Check !");
 		// clear data
 		By path = By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY.replace("${name}", eventTest3));
 		clearData(path);
+		log.info("Data cleared !");
+		
+		log.info("Test 3 passed !");
 	}
 
 	@Test
@@ -157,20 +185,21 @@ public class calendar_test extends calendar_common {
 		/* Step 1: Perform to Delete "all"  category */
 		// click on option button in calendar box
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON).click();
-
+		log.info("Option box opened !");
 		// select add event in the list
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE).click();
-
+		log.info("add event category form opened !");
 		// click on delete on the event category "all"
 		driver.findElement(By.xpath(ELEMENT_CALENDAR_OPTIONSBUTTON_ADDEVENTCATEGORIE_DELETEEVENT.replace("${calName}", "All"))).click();
 		Assert.assertTrue(driver.findElement(By.xpath("//*[@class='infoIcon']")).isDisplayed(), "test fail");
-
+		log.info("Delete all category check !");
 		// click on the OK button in the alert window
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE_DELETEEVENT_ALERT).click();
-
+		log.info("alert window closed !");
 		// click on the close button
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON_ADDEVENTCATEGORIE_CLOSEBUTTON).click();
-
+		
+		log.info("Test 4 passed !");
 	}
 
 	@Test
@@ -191,9 +220,10 @@ public class calendar_test extends calendar_common {
 			/*  Step 1: Show add new event form */
 			// open add event form and set the name
 			addEvent(eventTest5);
-
+			log.info("add event form opened !");
 			//Display the detail
 			driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS).click();
+			log.info("more details tabs displayed !");
 			/* Step 2: Complete adding new event */
 			// Add a priority , verify and clear
 			Select drpPriority = new Select(driver.findElement(By.name("priority")));
@@ -202,10 +232,13 @@ public class calendar_test extends calendar_common {
 				drpPriority.selectByVisibleText("High");
 				// click on Save button
 				driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SAVEBUTTON).click();
+				log.info("High priority event created !");
 				Assert.assertTrue(driver.findElement(ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_HIGH).isDisplayed(), "test fail");
+				log.info("Check !");
 				// clear
 				By path = ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_HIGH;
 				clearData(path);
+				log.info("Data cleared !");
 			}
 
 			else if (i==1)
@@ -213,10 +246,13 @@ public class calendar_test extends calendar_common {
 				drpPriority.selectByVisibleText("Normal");
 				// click on Save button
 				driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SAVEBUTTON).click();
+				log.info("Normal priority event created !");
 				Assert.assertTrue(driver.findElement(ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_NORMAL).isDisplayed(), "test fail");
+				log.info("Check !");
 				// clear
 				By path = ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_NORMAL;
 				clearData(path);
+				log.info("Data cleared !");
 			}
 
 			else if (i==2)	
@@ -224,15 +260,18 @@ public class calendar_test extends calendar_common {
 				drpPriority.selectByVisibleText("Low");
 				// click on Save button
 				driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_MOREDETAILS_SAVEBUTTON).click();
+				log.info("Low priority event created !");
 				Assert.assertTrue(driver.findElement(ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_LOW).isDisplayed(), "test fail");
+				log.info("Check !");
 				// clear
 				By path = ELEMENT_CALENDAR_EVENTDISPLAY_PRIORITY_LOW;
 				clearData(path);
+				log.info("Data cleared !");
 			}
 
 
 		}
-
+		log.info("Test 5 passed !");
 	}
 
 	@Test
@@ -254,17 +293,23 @@ public class calendar_test extends calendar_common {
 			/* Step 2 : Add event with duplicated name */
 			// open add event form and set the name
 			addEvent(eventTest6);
+			log.info("Add event form opened !");
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
 			// click on Save button
 			driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_SAVEBUTTON).click();
+			log.info("event created !");
 			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
 		}
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
 		// Test result
 		Assert.assertTrue(driver.findElement(By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_NORMALEVENT.replace("${name}", eventTest6))).isDisplayed(), "test fail");
+		log.info("Check !");
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS); 
 		// clear data
 		clearData(By.xpath("//*[@id='UIWeekViewGrid']//div[1][@class='eventContainerBorder weekViewEventBoxes asparagus shortTitle']//div[contains(text(),'duplicated name')]"));
 		clearData(By.xpath("//*[@id='UIWeekViewGrid']//div[2][@class='eventContainerBorder weekViewEventBoxes asparagus shortTitle']//div[contains(text(),'duplicated name')]"));
+		log.info("Data cleared !");
+		
+		log.info("Test 6 passed !");
 	}
 }

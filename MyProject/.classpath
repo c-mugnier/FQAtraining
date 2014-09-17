@@ -40,5 +40,6 @@
 	<classpathentry kind="lib" path="/home/cmugnier/Downloads/selenium-2.42.2/libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="/home/cmugnier/Downloads/selenium-2.42.2/selenium-java-2.42.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/cmugnier/Downloads/selenium-2.42.2/log4j-1.2.15.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

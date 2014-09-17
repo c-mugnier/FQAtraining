@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -49,6 +48,8 @@ public class calendar_common {
 	public calendar_common(WebDriver driver){
 		calendar_common.driver = driver;
 	}
+	
+	
 	public void open() {
 
 		//Click on the calendar button
