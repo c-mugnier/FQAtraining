@@ -63,6 +63,7 @@ public class calendar_test extends calendar_common {
 	 * Step 2: Add quick event
 	 */	
 	public void test1() {
+		log.info("Test 1 started !");
 		String eventTest= "event test";
 		/*Step 1 : Click on the add quick event button*/
 		//Open the event creation form by right click
@@ -96,7 +97,7 @@ public class calendar_test extends calendar_common {
 	 * Step 2: Add event with special characters 
 	 */	
 	public void test2() {
-		
+		log.info("Test 2 started !");
 		String eventTest2 = "event <test2>";
 
 		/* Step 2: Add event with special characters */
@@ -148,7 +149,7 @@ public class calendar_test extends calendar_common {
 	 */	
 	public void test3() {
 
-
+		log.info("Test 3 started !");
 		String eventTest3 = "event test3";
 		/* Step 1:Show add new event form */
 		// click on the add quick event button & set the event's title
@@ -182,6 +183,7 @@ public class calendar_test extends calendar_common {
 	 */	
 	public void test4() {
 
+		log.info("Test 4 started !");
 		/* Step 1: Perform to Delete "all"  category */
 		// click on option button in calendar box
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON).click();
@@ -213,6 +215,7 @@ public class calendar_test extends calendar_common {
 	 */	
 	public void test5() {
 		
+		log.info("Test 5 started !");
 		String eventTest5 = "event test5";
 
 		int i = 0;
@@ -285,6 +288,7 @@ public class calendar_test extends calendar_common {
 	 */	
 	public void test6() {
 
+		log.info("Test 6 started !");
 		String eventTest6 = "duplicated name";
 		// "for" to create 2 event with a duplicated name
 		int j = 0;
