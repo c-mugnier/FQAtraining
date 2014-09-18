@@ -1,53 +1,62 @@
-2014-09-17 16:45:00,478 INFO  [Log4j] - New driver created !
-2014-09-17 16:45:02,842 INFO  [Log4j] - Logged on PLF !
-2014-09-17 16:45:03,655 INFO  [Log4j] - Calendar open !
-2014-09-17 16:45:04,341 INFO  [Log4j] - Open quick event form by right click !
-2014-09-17 16:45:04,515 INFO  [Log4j] - Event created !
-2014-09-17 16:45:06,704 INFO  [Log4j] - Data cleaned !
-2014-09-17 16:45:06,704 INFO  [Log4j] - Test 1 passed !
-2014-09-17 16:45:07,193 INFO  [Log4j] - Open new event form !
-2014-09-17 16:45:07,665 INFO  [Log4j] - Open more details form !
-2014-09-17 16:45:07,699 INFO  [Log4j] - Check !
-2014-09-17 16:45:07,904 INFO  [Log4j] - open reminders tabs !
-2014-09-17 16:45:07,926 INFO  [Log4j] - Check !
-2014-09-17 16:45:08,116 INFO  [Log4j] - open participants tabs !
-2014-09-17 16:45:08,142 INFO  [Log4j] - Check !
-2014-09-17 16:45:08,354 INFO  [Log4j] - open schedule tabs !
-2014-09-17 16:45:08,380 INFO  [Log4j] - Check !
-2014-09-17 16:45:08,542 INFO  [Log4j] - Event created !
-2014-09-17 16:45:09,261 INFO  [Log4j] - Check !
-2014-09-17 16:45:10,111 INFO  [Log4j] - Data cleared !
-2014-09-17 16:45:10,111 INFO  [Log4j] - Test 2 passed !
-2014-09-17 16:45:10,638 INFO  [Log4j] - Open new event form !
-2014-09-17 16:45:10,793 INFO  [Log4j] - Check all day option !
-2014-09-17 16:45:10,991 INFO  [Log4j] - Event created !
-2014-09-17 16:45:11,795 INFO  [Log4j] - Check !
-2014-09-17 16:45:12,466 INFO  [Log4j] - Data cleared !
-2014-09-17 16:45:12,466 INFO  [Log4j] - Test 3 passed !
-2014-09-17 16:45:12,900 INFO  [Log4j] - Option box opened !
-2014-09-17 16:45:13,032 INFO  [Log4j] - add event category form opened !
-2014-09-17 16:45:13,787 INFO  [Log4j] - Delete all category check !
-2014-09-17 16:45:14,000 INFO  [Log4j] - alert window closed !
-2014-09-17 16:45:14,295 INFO  [Log4j] - Test 4 passed !
-2014-09-17 16:45:14,598 INFO  [Log4j] - add event form opened !
-2014-09-17 16:45:15,089 INFO  [Log4j] - more details tabs displayed !
-2014-09-17 16:45:15,566 INFO  [Log4j] - High priority event created !
-2014-09-17 16:45:16,205 INFO  [Log4j] - Check !
-2014-09-17 16:45:16,922 INFO  [Log4j] - Data cleared !
-2014-09-17 16:45:17,521 INFO  [Log4j] - add event form opened !
-2014-09-17 16:45:18,003 INFO  [Log4j] - more details tabs displayed !
-2014-09-17 16:45:18,586 INFO  [Log4j] - Normal priority event created !
-2014-09-17 16:45:19,269 INFO  [Log4j] - Check !
-2014-09-17 16:45:20,044 INFO  [Log4j] - Data cleared !
-2014-09-17 16:45:20,515 INFO  [Log4j] - add event form opened !
-2014-09-17 16:45:20,998 INFO  [Log4j] - more details tabs displayed !
-2014-09-17 16:45:21,547 INFO  [Log4j] - Low priority event created !
-2014-09-17 16:45:22,202 INFO  [Log4j] - Check !
-2014-09-17 16:45:23,002 INFO  [Log4j] - Data cleared !
-2014-09-17 16:45:23,003 INFO  [Log4j] - Test 5 passed !
-2014-09-17 16:45:23,466 INFO  [Log4j] - Add event form opened !
-2014-09-17 16:45:23,689 INFO  [Log4j] - event created !
-2014-09-17 16:45:24,095 INFO  [Log4j] - Add event form opened !
-2014-09-17 16:45:24,356 INFO  [Log4j] - event created !
-2014-09-17 16:45:24,744 INFO  [Log4j] - Check !
-2014-09-17 16:45:26,177 INFO  [Log4j] - Calendar closed !
+2014-09-18 15:35:03,652 INFO  [Log4j] - New driver created !
+2014-09-18 15:35:06,548 INFO  [Log4j] - Logged on PLF !
+2014-09-18 15:35:07,660 INFO  [Log4j] - Calendar open !
+2014-09-18 15:35:07,677 INFO  [Log4j] - Test started !
+2014-09-18 15:35:08,373 INFO  [Log4j] - Open quick event form by right click !
+2014-09-18 15:35:08,551 INFO  [Log4j] - Event created !
+2014-09-18 15:35:10,818 INFO  [Log4j] - Data cleaned !
+2014-09-18 15:35:10,818 INFO  [Log4j] - Test 1 passed !
+2014-09-18 15:35:10,820 INFO  [Log4j] - Test started !
+2014-09-18 15:35:11,346 INFO  [Log4j] - Open new event form !
+2014-09-18 15:35:11,561 INFO  [Log4j] - Open more details form !
+2014-09-18 15:35:11,861 INFO  [Log4j] - Check !
+2014-09-18 15:35:12,061 INFO  [Log4j] - open reminders tabs !
+2014-09-18 15:35:12,086 INFO  [Log4j] - Check !
+2014-09-18 15:35:12,310 INFO  [Log4j] - open participants tabs !
+2014-09-18 15:35:12,354 INFO  [Log4j] - Check !
+2014-09-18 15:35:12,603 INFO  [Log4j] - open schedule tabs !
+2014-09-18 15:35:12,639 INFO  [Log4j] - Check !
+2014-09-18 15:35:12,875 INFO  [Log4j] - Event created !
+2014-09-18 15:35:13,532 INFO  [Log4j] - Check !
+2014-09-18 15:35:14,242 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:14,242 INFO  [Log4j] - Test 2 passed !
+2014-09-18 15:35:14,246 INFO  [Log4j] - Test started !
+2014-09-18 15:35:14,787 INFO  [Log4j] - Open new event form !
+2014-09-18 15:35:14,941 INFO  [Log4j] - Check all day option !
+2014-09-18 15:35:15,135 INFO  [Log4j] - Event created !
+2014-09-18 15:35:15,144 INFO  [Log4j] -  [[FirefoxDriver: firefox on LINUX (22f06afa-d6ed-4c71-ab1c-2a01925c925d)] -> xpath: //*[@ class='eventAlldayContent asparagus' and text()='event test3']]
+2014-09-18 15:35:15,181 INFO  [Log4j] - Check !
+2014-09-18 15:35:16,125 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:16,125 INFO  [Log4j] - Test 3 passed !
+2014-09-18 15:35:16,127 INFO  [Log4j] - Test started !
+2014-09-18 15:35:16,535 INFO  [Log4j] - Option box opened !
+2014-09-18 15:35:16,885 INFO  [Log4j] - add event category form opened !
+2014-09-18 15:35:17,484 INFO  [Log4j] - Delete all category check !
+2014-09-18 15:35:17,680 INFO  [Log4j] - alert window closed !
+2014-09-18 15:35:17,900 INFO  [Log4j] - Test 4 passed !
+2014-09-18 15:35:17,903 INFO  [Log4j] - Test started !
+2014-09-18 15:35:18,243 INFO  [Log4j] - add event form opened !
+2014-09-18 15:35:18,631 INFO  [Log4j] - more details tabs displayed !
+2014-09-18 15:35:19,485 INFO  [Log4j] - High priority event created !
+2014-09-18 15:35:20,198 INFO  [Log4j] - Check !
+2014-09-18 15:35:21,126 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:21,828 INFO  [Log4j] - add event form opened !
+2014-09-18 15:35:22,544 INFO  [Log4j] - more details tabs displayed !
+2014-09-18 15:35:22,994 INFO  [Log4j] - Normal priority event created !
+2014-09-18 15:35:23,692 INFO  [Log4j] - Check !
+2014-09-18 15:35:24,452 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:25,023 INFO  [Log4j] - add event form opened !
+2014-09-18 15:35:25,685 INFO  [Log4j] - more details tabs displayed !
+2014-09-18 15:35:26,171 INFO  [Log4j] - Low priority event created !
+2014-09-18 15:35:26,900 INFO  [Log4j] - Check !
+2014-09-18 15:35:27,706 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:27,706 INFO  [Log4j] - Test 5 passed !
+2014-09-18 15:35:27,708 INFO  [Log4j] - Test started !
+2014-09-18 15:35:28,215 INFO  [Log4j] - Add event form opened !
+2014-09-18 15:35:28,439 INFO  [Log4j] - event created !
+2014-09-18 15:35:28,746 INFO  [Log4j] - Add event form opened !
+2014-09-18 15:35:29,272 INFO  [Log4j] - event created !
+2014-09-18 15:35:29,318 INFO  [Log4j] - Check !
+2014-09-18 15:35:31,395 INFO  [Log4j] - Data cleared !
+2014-09-18 15:35:31,395 INFO  [Log4j] - Test 6 passed !
+2014-09-18 15:35:31,469 INFO  [Log4j] - Calendar closed !

@@ -5,7 +5,7 @@
     <classes>
       <class name="MyPackage.calendar_test">
         <methods>
-          <include name="test6"/>
+          <include name="Add_all_day_event"/>
           <include name="after"/>
           <include name="before"/>
         </methods>

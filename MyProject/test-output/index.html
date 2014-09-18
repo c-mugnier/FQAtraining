@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,21 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test6">test6</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -115,27 +101,32 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test1">test1</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Add_all_day_event">Add_all_day_event</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test2">test2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Add_event_with_priority">Add_event_with_priority</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test3">test3</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Add_new_event_with_duplicated_name">Add_new_event_with_duplicated_name</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test4">test4</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Add_new_event_with_special_characters">Add_new_event_with_special_characters</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="test5">test5</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Add_quick_event_from_calendar_view_by_right_click">Add_quick_event_from_calendar_view_by_right_click</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="MyPackage.calendar_test" hash-for-method="Delete_event_all_category">Delete_event_all_category</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -150,67 +141,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">MyPackage.calendar_test</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="test6">
-                  </a> <!-- test6 -->
-                  <span class="method-name">test6</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10 milliseconds
-Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:30&apos;
-System info: host: &apos;MAY38&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;3.13.0-35-generic&apos;, java.version: &apos;1.7.0_55&apos;
-Session ID: 3bfe019d-0903-4a1f-b86f-68e06dbfca71
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=false, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=28.0}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
-	at org.openqa.selenium.remote.RemoteExecuteMethod.execute(RemoteExecuteMethod.java:34)
-	at org.openqa.selenium.remote.RemoteMouse.contextClick(RemoteMouse.java:64)
-	at org.openqa.selenium.interactions.ContextClickAction.perform(ContextClickAction.java:37)
-	at org.openqa.selenium.interactions.CompositeAction.perform(CompositeAction.java:31)
-	at MyPackage.calendar_common.clearData(calendar_common.java:79)
-	at MyPackage.calendar_test.test6(calendar_test.java:310)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -219,37 +149,44 @@ Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssS
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="test1">
-                  </a> <!-- test1 -->
-                  <span class="method-name">test1</span>
+                  <a name="Add_all_day_event">
+                  </a> <!-- Add_all_day_event -->
+                  <span class="method-name">Add_all_day_event</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test2">
-                  </a> <!-- test2 -->
-                  <span class="method-name">test2</span>
+                  <a name="Add_event_with_priority">
+                  </a> <!-- Add_event_with_priority -->
+                  <span class="method-name">Add_event_with_priority</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test3">
-                  </a> <!-- test3 -->
-                  <span class="method-name">test3</span>
+                  <a name="Add_new_event_with_duplicated_name">
+                  </a> <!-- Add_new_event_with_duplicated_name -->
+                  <span class="method-name">Add_new_event_with_duplicated_name</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test4">
-                  </a> <!-- test4 -->
-                  <span class="method-name">test4</span>
+                  <a name="Add_new_event_with_special_characters">
+                  </a> <!-- Add_new_event_with_special_characters -->
+                  <span class="method-name">Add_new_event_with_special_characters</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="test5">
-                  </a> <!-- test5 -->
-                  <span class="method-name">test5</span>
+                  <a name="Add_quick_event_from_calendar_view_by_right_click">
+                  </a> <!-- Add_quick_event_from_calendar_view_by_right_click -->
+                  <span class="method-name">Add_quick_event_from_calendar_view_by_right_click</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Delete_event_all_category">
+                  </a> <!-- Delete_event_all_category -->
+                  <span class="method-name">Delete_event_all_category</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -257,7 +194,7 @@ Capabilities [{platform=LINUX, acceptSslCerts=true, javascriptEnabled=true, cssS
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-355147732/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--233754738/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -308,34 +245,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'test5')
+data.setCell(0, 1, 'Add_event_with_priority')
 data.setCell(0, 2, 'MyPackage.calendar_test')
-data.setCell(0, 3, 8705);
+data.setCell(0, 3, 9803);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'test2')
+data.setCell(1, 1, 'Add_new_event_with_duplicated_name')
 data.setCell(1, 2, 'MyPackage.calendar_test')
-data.setCell(1, 3, 3406);
+data.setCell(1, 3, 3688);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test6')
+data.setCell(2, 1, 'Add_new_event_with_special_characters')
 data.setCell(2, 2, 'MyPackage.calendar_test')
-data.setCell(2, 3, 3089);
+data.setCell(2, 3, 3423);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'test1')
+data.setCell(3, 1, 'Add_quick_event_from_calendar_view_by_right_click')
 data.setCell(3, 2, 'MyPackage.calendar_test')
-data.setCell(3, 3, 3041);
+data.setCell(3, 3, 3148);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'test3')
+data.setCell(4, 1, 'Add_all_day_event')
 data.setCell(4, 2, 'MyPackage.calendar_test')
-data.setCell(4, 3, 2353);
+data.setCell(4, 3, 1880);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'test4')
+data.setCell(5, 1, 'Delete_event_all_category')
 data.setCell(5, 2, 'MyPackage.calendar_test')
-data.setCell(5, 3, 1828);
+data.setCell(5, 3, 1774);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 22 seconds</span>
+              <span class="suite-total-time">Total running time: 23 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -367,34 +304,32 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">test1</span>
-                <span class="method-start">6914 ms</span>
+                <span class="method-name">Add_quick_event_from_calendar_view_by_right_click</span>
+                <span class="method-start">7756 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test2</span>
-                <span class="method-start">9957 ms</span>
+                <span class="method-name">Add_new_event_with_special_characters</span>
+                <span class="method-start">10906 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test3</span>
-                <span class="method-start">13365 ms</span>
+                <span class="method-name">Add_all_day_event</span>
+                <span class="method-start">14331 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test4</span>
-                <span class="method-start">15719 ms</span>
+                <span class="method-name">Delete_event_all_category</span>
+                <span class="method-start">16213 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">test5</span>
-                <span class="method-start">17549 ms</span>
+                <span class="method-name">Add_event_with_priority</span>
+                <span class="method-start">17989 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">test6</span>
-                <span class="method-start">26255 ms</span>
+                <span class="method-name">Add_new_event_with_duplicated_name</span>
+                <span class="method-start">27793 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">after</span>
-                <span class="method-start">29350 ms</span>
+                <span class="method-start">31482 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

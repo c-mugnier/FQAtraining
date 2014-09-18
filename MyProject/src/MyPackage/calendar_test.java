@@ -53,7 +53,7 @@ public class calendar_test extends calendar_common {
 		log.info("Calendar closed !");
 	}
 
-	@Test
+	@Test (priority = 0)
 	/*  
 	 @Author CMugnier
 	 @Param eventTest	
@@ -62,8 +62,8 @@ public class calendar_test extends calendar_common {
 	 * Step 1 : Show quick add event form
 	 * Step 2: Add quick event
 	 */	
-	public void test1() {
-		log.info("Test 1 started !");
+	public void Add_quick_event_from_calendar_view_by_right_click() {
+		log.info("Test started !");
 		String eventTest= "event test";
 		/*Step 1 : Click on the add quick event button*/
 		//Open the event creation form by right click
@@ -87,7 +87,7 @@ public class calendar_test extends calendar_common {
 		log.info("Test 1 passed !");
 	}
 
-	@Test
+	@Test (priority = 10)
 	/*
 	 * @author : CMugnier
 	 * @param : eventTest2
@@ -96,8 +96,8 @@ public class calendar_test extends calendar_common {
 	 * Step 1: Show detail add event form
 	 * Step 2: Add event with special characters 
 	 */	
-	public void test2() {
-		log.info("Test 2 started !");
+	public void Add_new_event_with_special_characters() {
+		log.info("Test started !");
 		String eventTest2 = "event <test2>";
 
 		/* Step 2: Add event with special characters */
@@ -138,7 +138,7 @@ public class calendar_test extends calendar_common {
 		log.info("Test 2 passed !");
 	}
 
-	@Test
+	@Test (priority = 20)
 	/*
 	 * @author : CMugnier
 	 * @param : eventTest3
@@ -147,9 +147,9 @@ public class calendar_test extends calendar_common {
 	 * Step 1:Show add new event form
 	 * Step 2: Complete adding new event
 	 */	
-	public void test3() {
-
-		log.info("Test 3 started !");
+	public void Add_all_day_event() {
+		
+		log.info("Test started !");
 		String eventTest3 = "event test3";
 		/* Step 1:Show add new event form */
 		// click on the add quick event button & set the event's title
@@ -163,27 +163,27 @@ public class calendar_test extends calendar_common {
 		// click on Save button
 		driver.findElement(ELEMENT_CALENDAR_QUICKADDEVENT_SAVEBUTTON).click();
 		log.info("Event created !");
+		log.info(" " +driver.findElement(By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY.replace("${name}", eventTest3))));
 		// verify
 		Assert.assertTrue(driver.findElement(By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY.replace("${name}", eventTest3))).isDisplayed(), "test fail");
 		log.info("Check !");
 		// clear data
 		By path = By.xpath(ELEMENT_CALENDAR_EVENTDISPLAY_ALLDAY.replace("${name}", eventTest3));
 		clearData(path);
-		log.info("Data cleared !");
-		
+		log.info("Data cleared !"); 
 		log.info("Test 3 passed !");
 	}
 
-	@Test
+	@Test (priority = 30)
 	/* 	
 	 * @author : CMugnier
 	 * test ID : 100001
 	 * test name : Delete event's "all" category
 	 * Step 1: Perform to Delete "all"  category
 	 */	
-	public void test4() {
+	public void Delete_event_all_category() {
 
-		log.info("Test 4 started !");
+		log.info("Test started !");
 		/* Step 1: Perform to Delete "all"  category */
 		// click on option button in calendar box
 		driver.findElement(ELEMENT_HOMEPAGE_CALENDARSBOX_OPTIONSBUTTON).click();
@@ -204,7 +204,7 @@ public class calendar_test extends calendar_common {
 		log.info("Test 4 passed !");
 	}
 
-	@Test
+	@Test (priority = 40)
 	/*
 	 * @author : CMugnier
 	 * @param : eventTest5
@@ -213,11 +213,10 @@ public class calendar_test extends calendar_common {
 	 * Step 1: Show add new event form
 	 * Step 2: Complete adding new event
 	 */	
-	public void test5() {
-		
-		log.info("Test 5 started !");
-		String eventTest5 = "event test5";
+	public void Add_event_with_priority() {
 
+		log.info("Test started !");
+		String eventTest5 = "event test5";
 		int i = 0;
 		for(i = 0; i<=2; i++) {
 			/*  Step 1: Show add new event form */
@@ -277,7 +276,7 @@ public class calendar_test extends calendar_common {
 		log.info("Test 5 passed !");
 	}
 
-	@Test
+	@Test (priority = 50)
 	/*
 	 * @author : CMugnier
 	 * @param : eventTest6
@@ -286,9 +285,9 @@ public class calendar_test extends calendar_common {
 	 * Step 1: Show detail add event form
 	 * Step 2 : Add event with duplicated name
 	 */	
-	public void test6() {
+	public void Add_new_event_with_duplicated_name() {
 
-		log.info("Test 6 started !");
+		log.info("Test started !");
 		String eventTest6 = "duplicated name";
 		// "for" to create 2 event with a duplicated name
 		int j = 0;

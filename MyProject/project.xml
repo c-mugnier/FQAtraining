@@ -1,0 +1,19 @@
+<project>
+
+  <id>  </id>
+  <name> Training FQA </name>
+  <currentVersion>1.0</currentVersion>
+
+  <developers>
+    <developer>
+      <name>Charles Mugnier</name>
+      <id>c-mugnier</id>
+      <email>cmugnier@exoplatform.com</email>
+    </developer>
+  </developers>
+
+  <organization>
+    <name> eXoPlatform </name>
+  </organization>
+
+</project>
