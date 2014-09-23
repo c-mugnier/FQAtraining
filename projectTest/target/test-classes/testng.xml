@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+ 
+<suite name="calendar_test" verbose="1">
+    <test name="TheTest">
+
+        <classes>
+            <class name="packageTest.TheTest"/>
+        </classes>
+    </test>
+</suite>
